@@ -4,9 +4,9 @@ game 'gta5'
 ui_page 'html/index.html'
 
 shared_scripts {
-	'config.lua',
-    '@es_extended/shared/locale.lua',
+	'@es_extended/shared/locale.lua',
 	'@es_extended/imports.lua',
+	'config.lua',
 	'locales/en.lua'
 }
 
