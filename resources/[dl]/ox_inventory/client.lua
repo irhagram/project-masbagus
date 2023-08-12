@@ -81,7 +81,7 @@ end
 ---@param data any
 ---@return boolean?
 function client.openInventory(inv, data)
-	exports['alan-jobui']:showIDEnable()
+	exports['midp-jobui']:showIDEnable()
 	if invOpen then
 		if not inv and currentInventory.type == 'newdrop' then
 			return client.closeInventory()
@@ -744,7 +744,7 @@ function client.closeInventory(server)
 		plyState.invOpen = false
 		defaultInventory.coords = nil
 
-		exports['alan-jobui']:showIDDisable()
+		exports['midp-jobui']:showIDDisable()
 	end
 end
 

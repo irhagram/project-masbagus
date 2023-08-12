@@ -69,7 +69,7 @@ AddEventHandler('esx_society:checkSocietyBalance', function(society)
 	end
 
 	TriggerEvent('esx_addonaccount:getSharedAccount', society.account, function(account)
-		TriggerClientEvent('alan-tasknotify:client:SendAlert',  xPlayer.source, { type = 'error', text = 'Balance: '..ESX.Math.GroupDigits(account.money)})
+		TriggerClientEvent('midp-tasknotify:client:SendAlert',  xPlayer.source, { type = 'error', text = 'Balance: '..ESX.Math.GroupDigits(account.money)})
 	end)
 end)
 
@@ -88,9 +88,9 @@ AddEventHandler('esx_society:withdrawMoney', function(societyName, amount)
 			if amount > 0 and account.money >= amount then
 				account.removeMoney(amount)
 				xPlayer.addMoney(amount, "Society Withdraw")
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Withdraw: ' ..ESX.Math.GroupDigits(amount)})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Withdraw: ' ..ESX.Math.GroupDigits(amount)})
 			else
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Invalid'})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Invalid'})
 			end
 		end)
 	else
@@ -113,11 +113,11 @@ AddEventHandler('esx_society:depositMoney', function(societyName, amount)
 		if amount > 0 and xPlayer.getMoney() >= amount then
 			TriggerEvent('esx_addonaccount:getSharedAccount', society.account, function(account)
 				xPlayer.removeMoney(amount, "Society Deposit")
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Deposit: ' ..ESX.Math.GroupDigits(amount)})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Deposit: ' ..ESX.Math.GroupDigits(amount)})
 				account.addMoney(amount)
 			end)
 		else
-			TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'invalid'})
+			TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'invalid'})
 		end
 	else
 		print(('[^3WARNING^7] Player ^5%s^7 attempted to deposit to society - ^5%s^7!'):format(source, society.name))
@@ -137,10 +137,10 @@ AddEventHandler('esx_society:washMoney', function(society, amount)
 
 			MySQL.insert('INSERT INTO society_moneywash (identifier, society, amount) VALUES (?, ?, ?)', {xPlayer.identifier, society, amount},
 			function(rowsChanged)
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Mencuci:'..ESX.Math.GroupDigits(amount)})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Mencuci:'..ESX.Math.GroupDigits(amount)})
 			end)
 		else
-			TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Invalid'})
+			TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Invalid'})
 		end
 	else
 		print(('[^3WARNING^7] Player ^5%s^7 attempted to wash money in society - ^5%s^7!'):format(source, society))
@@ -298,11 +298,11 @@ ESX.RegisterServerCallback('esx_society:setJob', function(source, cb, identifier
 			xTarget.setJob(job, grade)
 
 			if type == 'hire' then
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Mengangkat'..job})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Mengangkat'..job})
 			elseif type == 'promote' then
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Anda Dipromosikan'})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Anda Dipromosikan'})
 			elseif type == 'fire' then
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Anda Dipecat'})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Anda Dipecat'})
 			end
 
 			cb()

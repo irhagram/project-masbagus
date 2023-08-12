@@ -364,7 +364,7 @@ end)
 RegisterCommand('+resetVoiceRWT', function() --  chat command, You can change it to your liking.
     local newGrid = getGridZone()
 	print(('[vsync] Forcing zone from %s to %s and resetting voice targets.'):format(currentGrid, newGrid))
-	exports['alan-tasknotify']:SendAlert('success', "Reset Voice...", 10000)
+	exports['midp-tasknotify']:SendAlert('success', "Reset Voice...", 10000)
 	if GetConvar('voice_externalAddress', '') ~= externalAddress and GetConvarInt('voice_externalPort', 0) ~= externalPort then
 		MumbleSetServerAddress(GetConvar('voice_externalAddress', ''), GetConvarInt('voice_externalPort', 0))
 		while not MumbleIsConnected() do

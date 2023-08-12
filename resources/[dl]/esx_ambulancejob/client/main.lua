@@ -261,7 +261,7 @@ function SendDistressSignal()
   local data = {displayCode = '119', description = 'Lokasi Korban', priority = 'high', isImportant = 1, recipientList = {'ambulance'}, length = '15000', infoM = 'fa-info-circle', info = 'Check Map Untuk Lokasinya'}
   local dispatchData = {dispatchData = data, caller = 'Alarm', coords = playerCoords}
 
-	TriggerServerEvent('alan-phone:addsms', playerCoords, 'Lokasi korban!', 'ambulance', time)
+	TriggerServerEvent('midp-phone:addsms', playerCoords, 'Lokasi korban!', 'ambulance', time)
   TriggerServerEvent('wf-alerts:svNotify', dispatchData)
 end
 
@@ -510,11 +510,11 @@ end)
 
 RegisterNetEvent("dl-ems:oplasmenu")
 AddEventHandler("dl-ems:oplasmenu", function()
-	if (exports['alan-core']:itemCount('tiketoplas') > 0) then
+	if (exports['midp-core']:itemCount('tiketoplas') > 0) then
 		  TriggerServerEvent('dl-ems:hapustiket', tiket)
 		  OpenPlasticSurgery()
 	  else
-	    exports['alan-tasknotify']:SendAlert('error', 'Tidak Memiliki Ticket')
+	    exports['midp-tasknotify']:SendAlert('error', 'Tidak Memiliki Ticket')
 	  end
 end)
 
@@ -737,7 +737,7 @@ RegisterNetEvent('dl-job:LaporKoma', function()
     if not input then return end
     local alasane = input[1]
     TriggerServerEvent('dl-job:kirimLKoma', gettjob, alasane)
-    exports['alan-tasknotify']:SendAlert('success', 'Laporan Terkirim')
+    exports['midp-tasknotify']:SendAlert('success', 'Laporan Terkirim')
 end)
 
 RegisterNetEvent("dl-job:buatKPasien")
@@ -750,7 +750,7 @@ AddEventHandler("dl-job:buatKPasien", function(data)
 	local mugshotURL = data[2]
 	local habis = data[3]
 	TriggerServerEvent("dl-job:gawekno", idplyr, mugshotURL, habis)
-  exports['alan-tasknotify']:SendAlert('success', 'Berhasil Membuat (Terikirim Ke id yang di tuju)')
+  exports['midp-tasknotify']:SendAlert('success', 'Berhasil Membuat (Terikirim Ke id yang di tuju)')
 end)
 
 RegisterNetEvent("dl-job:buatKBPJS")
@@ -763,7 +763,7 @@ AddEventHandler("dl-job:buatKBPJS", function(data)
 	local mugshotURL = data[2]
 	local habis = data[3]
 	TriggerServerEvent("dl-job:gaweknoBPJS", idplyr, mugshotURL, habis)
-  exports['alan-tasknotify']:SendAlert('success', 'Berhasil Membuat (Terikirim Ke id yang di tuju)')
+  exports['midp-tasknotify']:SendAlert('success', 'Berhasil Membuat (Terikirim Ke id yang di tuju)')
 end)
 
 local liftcuy = {

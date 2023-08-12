@@ -72,7 +72,7 @@ AddEventHandler("esx-qalle-jail:jailPlayer", function(targetSrc, jailTime, jailR
 	  })
 	end)
 
-	TriggerClientEvent('alan-tasknotify:client:SendAlert', src, { type = 'error', text = " Dipenjara Selama " .. jailTime .. " Bulan"})
+	TriggerClientEvent('midp-tasknotify:client:SendAlert', src, { type = 'error', text = " Dipenjara Selama " .. jailTime .. " Bulan"})
 	else
 		DropPlayer(source, "Cie Yang Mau Ngecit Niee xixixixi, JANGAN SENGGOL DAILYLIFE KAWAND :)")
 	end	

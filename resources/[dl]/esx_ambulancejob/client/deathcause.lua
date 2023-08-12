@@ -104,5 +104,5 @@ function loadAnimDict(dict)
 end
 
 function Notify(message)
-	exports['alan-tasknotify']:SendAlert('success', message)
+	exports['midp-tasknotify']:SendAlert('success', message)
 end

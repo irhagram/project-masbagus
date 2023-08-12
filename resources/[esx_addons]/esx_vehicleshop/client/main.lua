@@ -306,11 +306,11 @@ function OpenShopMenu()
 									local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
 									vehicleProps.plate = newPlate
 									SetVehicleNumberPlateText(vehicle, newPlate)
-									exports['alan-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
+									exports['midp-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
 									if Config.EnableOwnedVehicles then
 										TriggerServerEvent('esx_vehicleshop:setVehicleOwned', vehicleProps)
 									end
-										exports['alan-tasknotify']:SendAlert('error', 'Membeli Kendaraan')
+										exports['midp-tasknotify']:SendAlert('error', 'Membeli Kendaraan')
 									end)
 	
 									FreezeEntityPosition(playerPed, false)

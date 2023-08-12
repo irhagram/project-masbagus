@@ -26,7 +26,7 @@ RegisterCommand('ooc', function(source, args, rawCommand)
             oocdelay[source] = GetGameTimer()
         end
     else
-        TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Kamu telah menggunakan OOC CHAT 1 menit sebelumnya, kamu harus menunggu", 5000, 'error')
+        TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Kamu telah menggunakan OOC CHAT 1 menit sebelumnya, kamu harus menunggu", 5000, 'error')
     end
 end, false)
 
@@ -54,7 +54,7 @@ end, false)
         end
     else
 
-        TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Kamu telah menggunakan 119 CHAT 5 menit sebelumnya, kamu harus menunggu", 5000, 'error')
+        TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Kamu telah menggunakan 119 CHAT 5 menit sebelumnya, kamu harus menunggu", 5000, 'error')
     end
 end, false)]]
 
@@ -71,7 +71,7 @@ RegisterCommand('iklan', function(source, args, rawCommand)
             })
             xPlayer.removeMoney(10000)
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Cukup Uang Untuk Memasang Iklan", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Cukup Uang Untuk Memasang Iklan", 5000, 'error')
         end
     end
 end, false)
@@ -88,7 +88,7 @@ RegisterCommand('pol', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)
@@ -105,7 +105,7 @@ RegisterCommand('mecha', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)
@@ -122,7 +122,7 @@ RegisterCommand('ems', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)
@@ -139,7 +139,7 @@ RegisterCommand('taxi', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)
@@ -156,7 +156,7 @@ RegisterCommand('pedagang', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)
@@ -173,7 +173,7 @@ RegisterCommand('pemerintah', function(source, args, rawCommand)
                 args = { name, msg }
             })
         else
-            TriggerClientEvent('alan-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
+            TriggerClientEvent('midp-tasknotify:Alert', source, "INFO", "Tidak Ada Aksess!", 5000, 'error')
         end
     end
 end, false)

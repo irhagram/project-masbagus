@@ -800,7 +800,7 @@ RegisterNetEvent('dl-job:revive')
 AddEventHandler('dl-job:revive', function()
 	local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 	if closestPlayer == -1 or closestDistance > 1.5 then
-		exports['alan-tasknotify']:SendAlert('error', 'Tidak Ada Orang Disekitar')
+		exports['midp-tasknotify']:SendAlert('error', 'Tidak Ada Orang Disekitar')
 	else
 		revivePlayer(closestPlayer)
 	end

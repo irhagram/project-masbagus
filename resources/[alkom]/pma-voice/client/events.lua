@@ -30,12 +30,12 @@ AddEventHandler('mumbleConnected', function(address, isReconnecting)
 	handleInitialState()
 
 	logger.log('Finished connection logic')
-	exports['alan-tasknotify']:SendAlert('success', 'Voice Connected!')
+	exports['midp-tasknotify']:SendAlert('success', 'Voice Connected!')
 end)
 
 AddEventHandler('mumbleDisconnected', function(address)
 	logger.info('Disconnected from mumble server with address of %s', GetConvarInt('voice_hideEndpoints', 1) == 1 and 'HIDDEN' or address)
-	exports['alan-tasknotify']:SendAlert('success', 'Voice Disconnected!')
+	exports['midp-tasknotify']:SendAlert('success', 'Voice Disconnected!')
 end)
 
 -- TODO: Convert the last Cfg to a Convar, while still keeping it simple.

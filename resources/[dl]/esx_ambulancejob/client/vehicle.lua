@@ -76,7 +76,7 @@ function OpenVehicleSpawnerMenu(hospital, partNum)
 								ESX.Game.SpawnVehicle(data2.current.model, spawnPoint.coords, spawnPoint.heading, function(vehicle)
 									ESX.Game.SetVehicleProperties(vehicle, data2.current.vehicleProps)
 									exports["dl-bensin"]:SetFuel(vehicle, 100)
-									exports['alan-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
+									exports['midp-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
 									TriggerServerEvent('esx_vehicleshop:setJobVehicleState', data2.current.vehicleProps.plate, false)
 									ESX.ShowNotification(_U('garage_released'))
 								end)
@@ -260,7 +260,7 @@ function OpenHelicopterSpawnerMenu(hospital, partNum)
 								ESX.Game.SpawnVehicle(data2.current.model, spawnPoint.coords, spawnPoint.heading, function(vehicle)
 									ESX.Game.SetVehicleProperties(vehicle, data2.current.vehicleProps)
 									exports["dl-bensin"]:SetFuel(vehicle, 100)
-									exports['alan-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
+									exports['midp-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
 									TriggerServerEvent('esx_vehicleshop:setJobVehicleState', data2.current.vehicleProps.plate, false)
 									ESX.ShowNotification(_U('garage_released'))
 								end)
@@ -546,7 +546,7 @@ Citizen.CreateThread(function()
 
 			-- TODO : FAST TRAVEL
 			for k , v in pairs(Config.Hospitals['CentralLosSantos']['FastTravelsPrompt']) do
-				exports["alan-nui"]:AddBoxZone("ems:fastlift"..k, vector3(v['From'].x, v['From'].y, v['From'].z), 1.5, 1.5, {
+				exports["midp-nui"]:AddBoxZone("ems:fastlift"..k, vector3(v['From'].x, v['From'].y, v['From'].z), 1.5, 1.5, {
 					name="ems:fastlift"..k,
 					heading=169.5,
 					debugPoly=false,
@@ -566,7 +566,7 @@ Citizen.CreateThread(function()
 				for k , v in pairs(tableEvent) do
 					if name == v.event then
 						if not Showing then
-							exports['alan-tasknotify']:Open('[E] Masuk', 'darkblue', 'right')
+							exports['midp-tasknotify']:Open('[E] Masuk', 'darkblue', 'right')
 							Showing = true
 						end
 						Citizen.CreateThread(function()
@@ -591,7 +591,7 @@ Citizen.CreateThread(function()
 				for k , v in pairs(tableEvent) do
 					if name == v.event then
 						if Showing then
-							exports['alan-tasknotify']:Close()
+							exports['midp-tasknotify']:Close()
 							Showing = false
 							exiting = true
 						end

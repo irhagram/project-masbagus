@@ -104,13 +104,13 @@ AddEventHandler('HRP:Impound:VehicleUnimpounded', function (data, index)
 		end
 
 	end)
-	exports['alan-tasknotify']:Alert("INFO", "Kendaraan dengan plate: " .. data.plate .. " berhasil di keluarkan!", 5000, 'error')
+	exports['midp-tasknotify']:Alert("INFO", "Kendaraan dengan plate: " .. data.plate .. " berhasil di keluarkan!", 5000, 'error')
 	SetNewWaypoint(Impound.SpawnLocations[spawnLocationIndex].x, Impound.SpawnLocations[spawnLocationIndex].y)
 end)
 
 RegisterNetEvent('HRP:Impound:CannotUnimpound')
 AddEventHandler('HRP:Impound:CannotUnimpound', function ()
-	exports['alan-tasknotify']:Alert("INFO", "Tidak cukup uang", 5000, 'error')
+	exports['midp-tasknotify']:Alert("INFO", "Tidak cukup uang", 5000, 'error')
 end)
 
 ----------------------------------------------------------------------------------------------------
@@ -140,7 +140,7 @@ function ShowImpoundMenu(action)
 		end
 
 		if(VehicleAndOwner == nil) then
-			exports['alan-tasknotify']:Alert("INFO", "Kendaraan tidak di ketahui, gagal menyita!", 5000, 'error')
+			exports['midp-tasknotify']:Alert("INFO", "Kendaraan tidak di ketahui, gagal menyita!", 5000, 'error')
 			return
 		end
 
@@ -159,7 +159,7 @@ function ShowImpoundMenu(action)
 			SendNuiMessage(json.encode(data))
 		end
 	else
-		exports['alan-tasknotify']:Alert("INFO", "tidak ada kendaraan", 5000, 'error')
+		exports['midp-tasknotify']:Alert("INFO", "tidak ada kendaraan", 5000, 'error')
 	end
 
 end
@@ -258,7 +258,7 @@ AddEventHandler('dl-impound:openmenuadmin', function()
 	if Data.job.name == 'police' then ]]
 		ShowAdminTerminal("admin")
 --[[ 	else
-		exports['alan-tasknotify']:SendAlert('error', 'Tidak Ada Aksess')
+		exports['midp-tasknotify']:SendAlert('error', 'Tidak Ada Aksess')
 	end ]]
 end)
 
@@ -303,7 +303,7 @@ RegisterNUICallback('impound', function(data, cb)
 	end
 
 	if (veh.plate:gsub("%s+", "") ~= data.plate:gsub("%s+", "")) then
-		exports['alan-tasknotify']:Alert("INFO", "kendaraan tidak cocok", 5000, 'error')
+		exports['midp-tasknotify']:Alert("INFO", "kendaraan tidak cocok", 5000, 'error')
 		return
 	end
 

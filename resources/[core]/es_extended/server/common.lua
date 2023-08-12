@@ -65,7 +65,7 @@ SetInterval(function()
 		if salary > 0 then
 			if job == 'unemployed' then -- unemployed
 				xPlayer.addAccountMoney('bank', salary)
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
 			elseif Config.EnableSocietyPayouts then -- possibly a society
 				TriggerEvent('esx_society:getSociety', xPlayer.job.name, function (society)
 					if society ~= nil then -- verified society
@@ -74,19 +74,19 @@ SetInterval(function()
 								xPlayer.addAccountMoney('bank', salary)
 								account.removeMoney(salary)
 
-								TriggerClientEvent('alan-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
+								TriggerClientEvent('midp-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
 							else
-								TriggerClientEvent('alan-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('company_nomoney')})
+								TriggerClientEvent('midp-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('company_nomoney')})
 							end
 						end)
 					else -- not a society
 						xPlayer.addAccountMoney('bank', salary)
-						TriggerClientEvent('alan-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
+						TriggerClientEvent('midp-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
 					end
 				end)
 			else -- generic job
 				xPlayer.addAccountMoney('bank', salary)
-				TriggerClientEvent('alan-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
+				TriggerClientEvent('midp-tasknotify:client:SendAlert', xPlayer.source, { type = 'inform', text = _U('received_salary', salary)})
 			end
 		end
 	end

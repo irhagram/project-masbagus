@@ -147,6 +147,6 @@ RegisterCommand("showidpl", function(source, args, rawCommand)
       TriggerServerEvent('jsfour-idcard:open', GetPlayerServerId(PlayerId()), GetPlayerServerId(player))
       playAnim('mp_common', 'givetake1_a', 2500)
     else
-		exports['alan-tasknotify']:SendAlert('error', 'Tidak Ada Orang Disekitar')
+		exports['midp-tasknotify']:SendAlert('error', 'Tidak Ada Orang Disekitar')
     end
 end, false)

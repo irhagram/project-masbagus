@@ -212,7 +212,7 @@ ESX.RegisterServerCallback('esx_vehicleshop:buyVehicle', function(source, cb, ve
 
 	if vehicleData and xPlayer.getMoney() >= vehicleData.price then
 		xPlayer.removeMoney(vehicleData.price)
-		TriggerClientEvent('alan-tasknotify:client:SendAlert', source, { type = 'error', text = 'Membeli kendaraan dengan harga: '..vehicleData.price})
+		TriggerClientEvent('midp-tasknotify:client:SendAlert', source, { type = 'error', text = 'Membeli kendaraan dengan harga: '..vehicleData.price})
 		cb(true)
 	else
 		cb(false)

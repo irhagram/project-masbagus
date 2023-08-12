@@ -52,15 +52,15 @@ ESX.SetPlayerData = function(key, val)
 end
 
 ESX.ShowNotification = function(message, type, length)
-	exports['alan-tasknotify']:SendAlert('inform', message, length)
+	exports['midp-tasknotify']:SendAlert('inform', message, length)
 end
 
 function ESX.TextUI(message, type)
-	exports['alan-tasknotify']:Open(message, 'darkred', type)
+	exports['midp-tasknotify']:Open(message, 'darkred', type)
 end
 
 function ESX.HideUI()
-    exports['alan-tasknotify']:Close()
+    exports['midp-tasknotify']:Close()
 end
 ESX.ShowAdvancedNotification = function(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)
 	if saveToBrief == nil then saveToBrief = true end
@@ -437,7 +437,7 @@ ESX.Game.SpawnVehicle = function(vehicle, coords, heading, cb, networked)
 		SetVehicleNeedsToBeHotwired(vehicle, false)
 		SetModelAsNoLongerNeeded(model)
 		SetVehRadioStation(vehicle, 'OFF')
-		exports['alan-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
+		exports['midp-kunci']:givePlayerKeys(GetVehicleNumberPlateText(vehicle), true)
 
 		RequestCollisionAtCoord(coords.x, coords.y, coords.z)
 		while not HasCollisionLoadedAroundEntity(vehicle) do

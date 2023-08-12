@@ -63,7 +63,7 @@ function openGui()
 end
 
 function hasRadio()
-    if (exports['alan-core']:itemCount('radio') > 0)then
+    if (exports['midp-core']:itemCount('radio') > 0)then
         return true
     else
         return false
@@ -85,7 +85,7 @@ RegisterNUICallback('volumeUp', function(data, cb)
   local newvol = volume + 10
   if volume < 90 then
     exports["pma-voice"]:setRadioVolume(newvol)
-    exports['alan-tasknotify']:SendAlert('inform', 'Volume: ' .. newvol, 1000)
+    exports['midp-tasknotify']:SendAlert('inform', 'Volume: ' .. newvol, 1000)
   end
   cb('ok')
 end)
@@ -95,7 +95,7 @@ RegisterNUICallback('volumeDown', function(data, cb)
   local newvol = volume- 10
   if volume > 10 then
     exports["pma-voice"]:setRadioVolume(newvol)
-    exports['alan-tasknotify']:SendAlert('inform', 'Volume: ' .. newvol, 1000)
+    exports['midp-tasknotify']:SendAlert('inform', 'Volume: ' .. newvol, 1000)
   end
   cb('ok')
 end)
@@ -115,14 +115,14 @@ RegisterNUICallback('close', function(data, cb)
     if ruwetcokk == nil then ruwetcokk = 0 end
 
     if ruwetcokk == 0 then
-        exports['alan-tasknotify']:SendAlert('error', 'Tidak Ada Aksess!', 5000)
+        exports['midp-tasknotify']:SendAlert('error', 'Tidak Ada Aksess!', 5000)
         exports['pma-voice']:removePlayerFromRadio()
         exports["pma-voice"]:setVoiceProperty("radioEnabled", false)
     else
         radioChannel = ruwetcokk
         exports['pma-voice']:addPlayerToRadio(radioChannel)
         exports["pma-voice"]:setVoiceProperty("radioEnabled", true)
-        exports['alan-tasknotify']:SendAlert('inform', 'Join radio: ' .. radioChannel, 5000)
+        exports['midp-tasknotify']:SendAlert('inform', 'Join radio: ' .. radioChannel, 5000)
     end
 
     GuiOpened = false
@@ -137,7 +137,7 @@ RegisterNUICallback('poweredOn', function(data, cb)
         ruwetcokk = 0
     end
 
-    exports['alan-tasknotify']:SendAlert('inform', 'Radio On!', 5000)
+    exports['midp-tasknotify']:SendAlert('inform', 'Radio On!', 5000)
     exports['pma-voice']:addPlayerToRadio(ruwetcokk)
     exports["pma-voice"]:setVoiceProperty("radioEnabled", true)
 end)
@@ -145,7 +145,7 @@ end)
 RegisterNUICallback('poweredOff', function(data, cb)
     exports['pma-voice']:removePlayerFromRadio()
     exports["pma-voice"]:setVoiceProperty("radioEnabled", false)
-    exports['alan-tasknotify']:SendAlert('error', 'Radio Off!', 5000)
+    exports['midp-tasknotify']:SendAlert('error', 'Radio Off!', 5000)
 end)
 
 Citizen.CreateThread(function()

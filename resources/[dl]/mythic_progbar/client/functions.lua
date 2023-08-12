@@ -96,10 +96,10 @@ function Process(action, start, tick, finish)
                 end
             end)
         else
-            exports['alan-tasknotify']:SendAlert('error', 'Already Doing An Action', 1000)
+            exports['midp-tasknotify']:SendAlert('error', 'Already Doing An Action', 1000)
         end
     else
-        exports['alan-tasknotify']:SendAlert('error', 'Cannot Perform An Action While Dead', 1000)
+        exports['midp-tasknotify']:SendAlert('error', 'Cannot Perform An Action While Dead', 1000)
     end
 end
 

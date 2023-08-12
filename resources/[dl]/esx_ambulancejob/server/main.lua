@@ -18,14 +18,14 @@ AddEventHandler("dl-job:getAmbulancesCount", function()
         local xPlayert = ESX.GetPlayerFromId(src)
         if xPlayert.job.name == "ambulance" then
             TriggerClientEvent("dl-job:autoreviveems", src)
-			TriggerClientEvent('alan-tasknotify:client:SendAlert', src, { type = 'inform', text = 'FREE, KARENA ANDA EMS!', length = 5000 })
+			TriggerClientEvent('midp-tasknotify:client:SendAlert', src, { type = 'inform', text = 'FREE, KARENA ANDA EMS!', length = 5000 })
         end
     else
         local src = source
         local xPlayer = ESX.GetPlayerFromId(src)        
         TriggerClientEvent("dl-job:autorevive", src)
         xPlayer.removeAccountMoney('bank', 15000)
-		TriggerClientEvent('alan-tasknotify:client:SendAlert', src, { type = 'inform', text = 'Membayar dokter lokal $DL15.000', length = 5000 })
+		TriggerClientEvent('midp-tasknotify:client:SendAlert', src, { type = 'inform', text = 'Membayar dokter lokal $DL15.000', length = 5000 })
     end
 end)
 
@@ -470,7 +470,7 @@ AddEventHandler('dl-job:kirimLKoma', function(text2, text4)
 	local namaic = xPlayer.getName(_source)
 
 	if text4 == 'isi alasanmu' then
-	TriggerClientEvent('alan-tasknotify:client:SendAlert', _source, { type = 'error', text = 'Isi alasan yang benar!'})
+	TriggerClientEvent('midp-tasknotify:client:SendAlert', _source, { type = 'error', text = 'Isi alasan yang benar!'})
 	else
 		text4 = text4
 	end
