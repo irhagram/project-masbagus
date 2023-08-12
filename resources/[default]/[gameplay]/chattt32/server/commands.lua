@@ -1,9 +1,7 @@
---ESX = nil 
 
 local oocdelay = {}
 --local emsdelay = {}
 
---TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterCommand('clear', function(source, args, rawCommand)
     TriggerClientEvent('chat:client:ClearChat', source)

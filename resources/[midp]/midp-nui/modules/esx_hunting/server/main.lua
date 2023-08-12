@@ -1,6 +1,3 @@
-ESX                = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent('esx-qalle-hunting:reward')
 AddEventHandler('esx-qalle-hunting:reward', function(Weight)

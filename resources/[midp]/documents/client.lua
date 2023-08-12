@@ -3,7 +3,6 @@ local CURRENT_DOCUMENT = nil
 local DOCUMENT_FORMS = nil
 
 CreateThread(function()
-	while ESX == nil do Wait(10) end
     while not ESX.IsPlayerLoaded do Wait(10) end
     ESX.PlayerData = ESX.GetPlayerData()
     DOCUMENT_FORMS = Config.Documents[Config.Locale]

@@ -1,4 +1,3 @@
-ESX = nil
 local PlayerData                = {}
 local UI_MOUSE_FOCUS = false
 local USER_DOCUMENTS = {}
@@ -22,10 +21,7 @@ local MENU_OPTIONS = {
 
 
 Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
+
     while ESX.IsPlayerLoaded == false do
         Citizen.Wait(10)
     end

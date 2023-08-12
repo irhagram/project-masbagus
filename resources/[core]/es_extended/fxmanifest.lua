@@ -1,47 +1,55 @@
-fx_version 'cerulean'
+fx_version 'adamant'
+
 game 'gta5'
+description 'ES Extended'
 lua54 'yes'
+version '1.10.1'
 
 shared_scripts {
 	'locale.lua',
-	'locales/en.lua',
+	'locales/*.lua',
+	'@ox_lib/init.lua',
 	'config.lua',
 	'config.weapons.lua',
-	'common/interval.lua',
-	'shared/locale.lua',
-	'threads.lua'
 }
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
+	'config.logs.lua',
 	'server/common.lua',
+	'server/modules/callback.lua',
 	'server/classes/player.lua',
+	'server/classes/overrides/*.lua',
 	'server/functions.lua',
+	'server/onesync.lua',
+	'server/paycheck.lua',
+
 	'server/main.lua',
 	'server/commands.lua',
 
-	'common/modules/math.lua',
-	'common/modules/table.lua',
+	'common/modules/*.lua',
 	'common/functions.lua',
-
-	'server/onesync.lua',
-	'server/npwd.lua'
+	'server/modules/actions.lua',
+	'server/modules/npwd.lua'
 }
 
 client_scripts {
+	'client/common.lua',
 	'client/functions.lua',
 	'client/wrapper.lua',
-	'client/main.lua',
-	--'client/skin.lua',
-	'misc.lua',
+	'client/modules/callback.lua',
 
+	'client/main.lua',
+
+	'common/modules/*.lua',
+	'common/functions.lua',
+
+	'common/functions.lua',
+	'client/modules/actions.lua',
 	'client/modules/death.lua',
+	'client/modules/npwd.lua',
 	'client/modules/scaleform.lua',
 	'client/modules/streaming.lua',
-
-	'common/modules/math.lua',
-	'common/modules/table.lua',
-	'common/functions.lua'
 }
 
 ui_page {
@@ -50,7 +58,6 @@ ui_page {
 
 files {
 	'imports.lua',
-	'import.lua',
 	'locale.js',
 	'html/ui.html',
 
@@ -62,8 +69,10 @@ files {
 
 	'html/fonts/pdown.ttf',
 	'html/fonts/bankgothic.ttf',
+}
 
-	'html/img/accounts/bank.png',
-	'html/img/accounts/black_money.png',
-	'html/img/accounts/money.png'
+dependencies {
+	'/native:0x6AE51D4B',
+	'oxmysql',
+	'spawnmanager',
 }

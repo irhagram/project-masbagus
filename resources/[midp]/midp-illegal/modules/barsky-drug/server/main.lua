@@ -1,4 +1,3 @@
-ESX = nil
 stressyo = true
 local input = nil
 local inprogress = 0
@@ -11,7 +10,6 @@ local playersProcessingCoke = {}
 local PlayersSellingCoke       = {}
 local PlayersSellingWeed       = {}
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 local stashes = {
 	{

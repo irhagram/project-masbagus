@@ -1,6 +1,4 @@
-ESX = nil
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 --[[ ***** EVENTS GUI ***** ]]
 RegisterServerEvent("antirpquestion:kick")

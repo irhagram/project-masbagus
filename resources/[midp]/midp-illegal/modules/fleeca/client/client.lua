@@ -1,5 +1,3 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 Freeze = {F1 = 0, F2 = 0, F3 = 0, F4 = 0, F5 = 0, F6 = 0}
 PlayerData = nil
@@ -420,9 +418,7 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    while ESX == nil do
-        Citizen.Wait(100)
-    end
+
     while ESX.GetPlayerData().job == nil do
         Citizen.Wait(100)
     end

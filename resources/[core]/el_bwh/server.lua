@@ -1,4 +1,3 @@
-ESX = nil
 local discord_webhook = "https://discord.com/api/webhooks/1033698785446084608/1dr3MJAWBFO8fyT0ANKjpL5gBokovPQXsZgz8n3XV5bcKT2cUWUowHqNgd2D4sSGqesv" -- paste your discord webhook between the quotes if you want to enable discord logs.
 local bancache,namecache = {},{}
 local open_assists,active_assists = {},{}
@@ -6,8 +5,6 @@ local open_assists,active_assists = {},{}
 function split(s, delimiter)result = {};for match in (s..delimiter):gmatch("(.-)"..delimiter) do table.insert(result, match) end return result end
 
 Citizen.CreateThread(function() -- startup
-    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-    while ESX==nil do Wait(0) end
     
     MySQL.ready(function()
         refreshNameCache()

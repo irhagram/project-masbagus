@@ -1,8 +1,3 @@
--- 2018 Henric 'Kekke' Johansson
-
-ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent('esx_kekke_tackle:tryTackle')
 AddEventHandler('esx_kekke_tackle:tryTackle', function(target)

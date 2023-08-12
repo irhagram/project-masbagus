@@ -2,14 +2,6 @@ if config.AddonList.crewPhone then
     local calanMuzikler = {}
     local musicOn = false
 
-    local ESX = nil
-
-    CreateThread(function ()
-        while ESX == nil do
-            Wait(50)
-            TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        end
-    end)
 
 
     -- Müzik çalma

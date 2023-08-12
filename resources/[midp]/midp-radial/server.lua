@@ -1,7 +1,4 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj)
-    ESX = obj
-end)
+
 RegisterServerEvent("st:bag2")
 AddEventHandler("st:bag2", function(target_id)
     local _source = source

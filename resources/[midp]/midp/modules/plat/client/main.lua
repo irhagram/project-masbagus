@@ -9,17 +9,13 @@ local Keys = {
   ["LEFT"] = 174, ["RIGHT"] = 175, ["TOP"] = 27, ["DOWN"] = 173,
   ["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
-local ESX	  = nil
 local plate = nil
 
 -- ESX
 Citizen.CreateThread(function()
   SetNuiFocus(false, false)
 
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
+
 end)
 
 -- Menu

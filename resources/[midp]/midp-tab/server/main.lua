@@ -1,8 +1,4 @@
-ESX = nil
 
-TriggerEvent('esx:getSharedObject', function(obj)
-    ESX = obj
-end)
 
 RegisterServerEvent('ns_policecad:getData')
 AddEventHandler('ns_policecad:getData', function()

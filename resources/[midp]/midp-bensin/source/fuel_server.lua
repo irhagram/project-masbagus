@@ -1,9 +1,7 @@
-ESX = nil
 
 local ox_inventory = exports.ox_inventory
 
 if Config.UseESX then
-	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 	RegisterServerEvent('fuel:pay')
 	AddEventHandler('fuel:pay', function(price)

@@ -1,7 +1,5 @@
-ESX = nil
 local oxinv = exports.ox_inventory
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback("okokBanking:GetPlayerInfo", function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)

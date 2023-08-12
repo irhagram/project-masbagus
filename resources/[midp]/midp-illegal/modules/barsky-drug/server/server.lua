@@ -1,6 +1,3 @@
-ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 TriggerEvent('esx_society:registerSociety', 'pedagang', 'pedagang', 'society_pedagang', 'society_pedagang', 'society_pedagang', {type = 'public'})
 TriggerEvent('esx_society:registerSociety', 'biker', 'biker', 'society_biker', 'society_biker', 'society_biker', {type = 'public'})

@@ -1,13 +1,9 @@
-local ESX = nil
 
 local infoGudang = nil
 local nameId = 0
 
 CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Wait(0)
-	end
+
 	while ESX.GetPlayerData().job == nil do
 		Wait(10)
 	end

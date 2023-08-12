@@ -2,11 +2,9 @@
 -- Praryo Locker Room
 --=====================
 
-ESX = nil
 
 local Delay = false
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback('alan_locker:checkLocker', function(source, cb, lockerId)
 	local pyrp = source

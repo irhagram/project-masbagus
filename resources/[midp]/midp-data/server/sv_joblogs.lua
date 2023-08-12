@@ -1,5 +1,4 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 local timers = { -- if you want more job shifts add table entry here same as the examples below
     ambulance = {
         {} -- don't edit inside

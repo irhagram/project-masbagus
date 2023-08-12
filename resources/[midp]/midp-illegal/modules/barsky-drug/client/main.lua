@@ -10,7 +10,6 @@ Keys = {
 	["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
 
-ESX = nil
 local menuOpen = false
 local wasOpen = false
 local coke_poochQTE = 0
@@ -19,10 +18,7 @@ local myJob = nil
 local PlayerData = {}
 
 Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
+
 
 	while ESX.GetPlayerData().job == nil do
 		Citizen.Wait(100)

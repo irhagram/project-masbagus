@@ -1,7 +1,5 @@
-ESX = nil
 local Licenses = {}
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 function getInGameName(identifier)
     local name

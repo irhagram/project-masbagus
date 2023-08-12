@@ -1,5 +1,3 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 AddEventHandler('onServerResourceStart', function(resourceName)
     if resourceName == 'ox_inventory' or resourceName == GetCurrentResourceName() then

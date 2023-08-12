@@ -1,5 +1,4 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+
 local mincash = 45000 -- minimum amount of cash a pile holds
 local maxcash = 75000 -- maximum amount of cash a pile can hold
 local black = true -- enable this if you want blackmoney as a reward

@@ -1,4 +1,3 @@
-ESX                = nil
 PlayersHarvesting  = {}
 PlayersHarvesting2 = {}
 PlayersHarvesting3 = {}
@@ -6,7 +5,6 @@ PlayersCrafting    = {}
 PlayersCrafting2   = {}
 PlayersCrafting3   = {}
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 if Config.MekanikMaxInService ~= -1 then
 	TriggerEvent('esx_service:activateService', 'mechanic', Config.MekanikMaxInService)

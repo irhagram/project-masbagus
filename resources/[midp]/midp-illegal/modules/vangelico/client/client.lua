@@ -1,4 +1,3 @@
-ESX = nil
 
 local canthermite = false
 local successful = false
@@ -19,10 +18,7 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
+
 	while ESX.GetPlayerData().job == nil do
 		Citizen.Wait(10)
 	end
@@ -39,9 +35,7 @@ AddEventHandler('esx:setJob', function(job)
 end)
 
 function UnAuthJob()
-	while ESX == nil do
-		Citizen.Wait(0)
-	end
+
 	local UnAuthjob = false
 	for i,v in pairs(Config_Vangelico.UnAuthJobs) do
 		if PlayerData.job.name == v then

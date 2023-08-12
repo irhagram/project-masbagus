@@ -1,6 +1,3 @@
-local ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 -- UPDATE license plate to the database
 ESX.RegisterServerCallback('jsfour-licenseplate:update', function(source, cb, oldP, newP)

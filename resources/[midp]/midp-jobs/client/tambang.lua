@@ -1,4 +1,3 @@
-ESX = nil
 local PlayerData = {}
 local Blips = {}
 local JobBlipsMiner = {}
@@ -7,10 +6,7 @@ local onambil = false
 local OnDuty = 0
 
 CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Wait(0)
-	end
+
 
 	while ESX.GetPlayerData().job == nil do
         Wait(10)

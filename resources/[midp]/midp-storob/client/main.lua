@@ -6,14 +6,7 @@ local lose = 0
 local lose1 = 0
 local posrob = nil
 local robberycode = {}
-ESX = nil
 
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
 
 function drawTxt(x,y, width, height, scale, text, r,g,b,a, outline)
 	SetTextFont(0)

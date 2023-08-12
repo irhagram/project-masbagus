@@ -1,4 +1,3 @@
-ESX = nil
 local PlayerData = {}
 local trans = {}
 local societyTrans = {}
@@ -17,10 +16,7 @@ AddEventHandler('esx:nui_ready', function()
 end)
 
 CreateThread(function()
-	while ESX == nil do
-		TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
-		Wait(0)
-	end
+
 	while ESX.GetPlayerData().job == nil do
 		Wait(10)
 	end

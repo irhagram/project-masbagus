@@ -1,6 +1,3 @@
-ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent("midp-core:keluarKau")
 AddEventHandler("midp-core:keluarKau", function(reason)

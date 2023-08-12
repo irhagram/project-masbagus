@@ -1,7 +1,5 @@
-ESX = nil
 local call_index = 0
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 TriggerEvent('es:addCommand', 'mdt', function(source, args, user)
 	local usource = source

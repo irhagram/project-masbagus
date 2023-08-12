@@ -1,4 +1,3 @@
-ESX = nil
 local PlayerData              	= {}
 local currentZone               = ''
 local LastZone                  = ''
@@ -15,12 +14,7 @@ local copblip
 local deliveryblip
 
 
-CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Wait(0)
-	end
-end)
+
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)

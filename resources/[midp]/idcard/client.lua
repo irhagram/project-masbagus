@@ -10,19 +10,12 @@ local Keys = {
 	["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
 
-ESX = nil
 
 local open = false
 --local posx, posy = 0.777, 0.26
 --local width, height = 0.07, 0.14
 --local LAurl = exports["mugshot"]:getMugshotUrl(GetPlayerPed(-1))
 
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
 
 -- Open ID card
 RegisterNetEvent('jsfour-idcard:open')

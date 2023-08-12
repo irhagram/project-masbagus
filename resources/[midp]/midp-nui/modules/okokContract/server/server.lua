@@ -1,6 +1,3 @@
-ESX = nil
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 local Webhook = 'https://discord.com/api/webhooks/1035799584837996606/tge4fKIvCB_4ncTj-YG2FL0fNND6IRdSwfAsiVdMZfOVEUo-orMKTazgEX3WTxv3eSvk'
 

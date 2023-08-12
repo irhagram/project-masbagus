@@ -4,7 +4,6 @@ local CurrentlyTowedVehicle, Blips, NPCOnJob, NPCTargetTowable, NPCTargetTowable
 local NPCHasSpawnedTowable, NPCLastCancel, NPCHasBeenNextToTowable, NPCTargetDeleterZone = false, GetGameTimer() - 5 * 60000, false, false
 local isDead, isBusy = false, false
 
-ESX = nil
 
 ObjectInFront = function(ped, pos)
 	local entityWorld = GetOffsetFromEntityInWorldCoords(ped, 0.0, 1.5, 0.0)
@@ -14,10 +13,7 @@ ObjectInFront = function(ped, pos)
 end
 
 Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
+
 
 	while ESX.GetPlayerData().job == nil do
 		Citizen.Wait(10)

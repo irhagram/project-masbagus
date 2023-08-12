@@ -1,5 +1,3 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 -- Allowed to reset during server restart
 -- You can use this number to calculate a vehicle spawn location index if you have multiple

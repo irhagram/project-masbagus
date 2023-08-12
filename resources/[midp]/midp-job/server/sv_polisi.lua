@@ -1,7 +1,3 @@
-ESX = nil
-
-
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 if Config.PolisiMaxInService ~= -1 then
 	TriggerEvent('esx_service:activateService', 'police', Config.PolisiMaxInService)

@@ -1,4 +1,3 @@
-ESX = nil
 local weaponEntityExists = false
 local weaponModel = nil
 local weaponName = nil
@@ -10,7 +9,6 @@ local loaded = false
 local holdingMega = false
 local ped = nil
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 local currentjob = ""
 
 RegisterNetEvent("esx:playerLoaded")

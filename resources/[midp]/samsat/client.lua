@@ -2,7 +2,6 @@
 -- Variables
 ----------------------------------------------------------------------------------------------------
 
-local ESX = nil
 local PlayerData = nil
 local OwnPlayerData = nil
 local DependenciesLoaded = false
@@ -21,10 +20,6 @@ local ImpoundedVehicles = nil
 
 Citizen.CreateThread(function ()
 
-	while ESX == nil do
-		TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
-		Citizen.Wait(10)
-	end
 
 	while ESX.GetPlayerData().job == nil do
 		Citizen.Wait(10)

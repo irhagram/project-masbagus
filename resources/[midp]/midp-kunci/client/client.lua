@@ -1,10 +1,8 @@
-ESX = nil
 
 local IsRobbing = false
 local LastVehicle = nil
 local isLoggedIn = true
 
-TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function()
@@ -14,7 +12,6 @@ AddEventHandler('esx:playerLoaded', function()
 end)
 
 Citizen.CreateThread(function()
-    while ESX == nil do Wait(1) end
     while not ESX.IsPlayerLoaded() do Wait(1000) end
     isLoggedIn = true
 end)

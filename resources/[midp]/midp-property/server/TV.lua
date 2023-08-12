@@ -1,6 +1,4 @@
-ESX = nil
 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 local data = {}
 
 local GenerateId = function(length, usecapital, usenumbers)

@@ -1,6 +1,4 @@
 -- ESX Framework Stuff ---------------------------------------------------------------
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback('linden_outlawalert:getCharData', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)

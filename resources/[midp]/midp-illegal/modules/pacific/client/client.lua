@@ -1,6 +1,5 @@
 -- You have issues? Use Github
 
-ESX = nil
 PoliceDoors = {}
 PlayerData = nil
 UTK = {
@@ -1337,9 +1336,7 @@ Citizen.CreateThread(function()
     end
 end)
 Citizen.CreateThread(function()
-    while ESX == nil do
-        Citizen.Wait(500)
-    end
+
     ESX.TriggerServerCallback("utk_oh:GetDoors", function(result)
         PoliceDoors = result
     end)
@@ -1395,4 +1392,4 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function() while true do Citizen.Wait(1) if PlaySound then local lCoords = GetEntityCoords(GetPlayerPed(-1)) local eCoords = vector3(257.10, 220.30, 106.28) local distIs  = Vdist(lCoords.x, lCoords.y, lCoords.z, eCoords) if(distIs <= 50) then SendNUIMessage({transactionType = 'playSound'}) Citizen.Wait(28000) else SendNUIMessage({transactionType = 'stopSound'}) end end end end)
-Citizen.CreateThread(function() while ESX == nil do TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end) Citizen.Wait(1) end Citizen.Wait(10000) UTK:GetInfo() end)
+Citizen.CreateThread(function() Citizen.Wait(10000) UTK:GetInfo() end)

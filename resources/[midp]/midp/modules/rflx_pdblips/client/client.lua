@@ -1,4 +1,3 @@
-local ESX = nil
 local PlayerData = {}
 local onDuty = false
 local inVeh = false
@@ -9,10 +8,6 @@ local nearBlips = {}
 local myBlip = {}
 
 Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Wait(0)
-	end
 
     if JobBlip.useRflxMulti then
         while exports['epnui']:getChar() == nil do
