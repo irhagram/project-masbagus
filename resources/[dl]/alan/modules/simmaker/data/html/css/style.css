@@ -1,0 +1,70 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body{
+    background: transparent;
+    margin-top: 100px;
+    font-family: Poppins;
+    color: rgba(139,184,205,0.9);
+
+}
+
+.custom-navbar{
+
+    height:45px;
+    background-color: rgba(101,196,186,0.95);
+}
+.main-content{
+    margin: auto;
+    width: 50%;
+
+}
+.content-drv1{
+    display:block;
+    width:1280px;
+    height:640px;
+    background-color: rgba(101,196,186,0.51);
+    overflow:auto;
+}
+
+#home_profile{
+    font-size: 12px;
+    padding-left: 30px;
+
+}
+
+#logolspd {
+
+}
+
+hr{
+    height: 1px;
+    color: yellow;
+    background-color: yellow;
+    border: none;
+}
+
+#biglogo {
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+}

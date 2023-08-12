@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+body {
+  visibility: hidden;
+  user-select: none;
+  white-space: nowrap;
+  margin: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 40;
+}
+
+#eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22pt;
+}
+
+
+#options-wrapper {
+  position: absolute;
+  top: calc(51.4%);
+  left: calc(49% - 1.5em);
+}
+
+.option-container {
+  color: #cfd2da;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 14pt;
+  line-height: 22pt;
+  vertical-align: middle;
+  margin: 2pt;
+  scale: 1;
+  height: 22pt;
+  width: 150pt;
+  top: 0;
+}
+
+.option-container:hover {
+  color: #00b5f7;
+}
+
+.option-icon {
+  font-size: 12pt;
+  line-height: 22pt;
+  width: 14pt;
+  margin: 5pt;
+}
+
+.option-label {
+  font-weight: 700;
+}

@@ -1,0 +1,20 @@
+Config = {
+    EnableSearch = true,
+    EnableEmoteBinds = true,
+    EnableWeaponBlock = false,
+    AllowedInVehicles = true,
+    EmotePlayCommands = {'e', 'emote', 'eplay'},
+    WalkSetCommands = {'w', 'walk'},
+    MenuOpenCommands = {'em', 'emotemenu'},
+    MenuPosition = 'top-right',
+    NotificationPosition = 'top', -- (top, bottom, top-left, top-right, bottom-left, bottom-right)
+    HelpAlertPosition = 'right-center', -- (right-center, left-center, top-center)
+    PtfxKeybind = 'g',
+    EnableAutoPtfx = false,
+    EnableNSFWEmotes = true,
+    EnableGangEmotes = true,
+    EnableSocialMovementEmotes = true,
+    EnableConsumableEmotes = true,
+    EnableSynchronizedEmotes = true,
+    EnableAnimalEmotes = true
+}

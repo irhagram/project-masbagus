@@ -1,0 +1,56 @@
+<div class="col-md-6" id="crime_record" style="padding-left: 35px">
+    <h4>Insert License Record </h4>
+    <form class="col-md-12 bg-dark">
+        <div class="row">
+
+            <div class="col-6">
+                <label>ID</label>
+                <input type="text" class="form-control" id="id_civ">
+                <small id="id_civ" class="form-text text-muted">/showid to check nearby Civilian id</small>
+            </div>
+            <div class="col-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" id="firstname_drv" disabled>
+            </div>
+            <div class="col-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lastname_drv" disabled>
+                <small id="lastname_drv" class="form-text text-muted"> </small>
+            </div>
+            <div class="col-6">
+                <label>Job</label>
+                <input type="text" class="form-control" id="job" disabled>
+                <small id="job" class="form-text text-muted"> </small>
+            </div>
+
+            <hr>
+            <div class="col-6">
+                <label>DOB</label>
+                <input type="text" class="form-control" id="dob" disabled>
+                <small id="dob" class="form-text text-muted"> </small>
+            </div>
+            <div class="col-6">
+                <label>TYPE</label>
+                <select id="type_drv" class="form-control">
+                    <option value="">SELECT TYPE</option>
+                    <option value="drivers_license">DRIVING LICENSE</option>
+                    <option value="firearms_license">FIREARMS LICENSE</option>
+                </select>
+            </div>
+
+        </div>
+        <br>
+        <button type="button" id="btn_reset_lic" class="btn btn-warning">Reset</button>
+        <button type="button" id="btn_license_rec" class="btn btn-primary">Submit</button>
+        <hr>
+        <div class="alert alert-dark" id="alert_license" role="alert" style="display: none">
+
+        </div>
+    </form>
+
+</div>
+<div class="col-md-6" style="padding-left: 100px">
+    <div id="biglogo">
+        <img src="img/big_logo.png" width="340" height="340" >
+    </div>
+</div>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+    overflow-y: hidden;
+    display: none;
+}
+
+button {
+    padding: 4%;
+    margin: 2%;
+    background: #a5a5a5;
+    border: none;
+}
+
+h1 {
+    padding: 5%;
+    font-family: 'Source Sans Pro', monospace;
+    text-align: center;
+    color: #ffffff;
+	font-size: 20px;
+}
+
+button {
+    font-family: 'Source Sans Pro', monospace;
+    background-color: rgba(10, 10, 10, 0.8);
+    width: 28vh;
+    height: 4.5vh;
+    margin-bottom: 1px;
+    transition: 0.2s;
+    color: white;
+    text-align: center;
+    font-size: 1.4vh;
+}
+
+button:hover {
+    background-color: #b12424a6;
+    transition: 0.2s;
+}
+
+.main{
+    position: absolute;
+    top: 2vh;
+    left: 10vh;
+    width: 28vh;
+    height: 4.5vh;
+    margin-bottom: .75vh;
+    transition: 0.2s;
+}
+
+.submit {
+    display: none;
+    background-color: rgba(32, 158, 16, 0.75);
+    width: 28vh;
+    height: 4.5vh;
+    margin-bottom: .75vh;
+    transition: 0.2s;
+}
+
+.submit:hover {
+    background-color: rgba(32, 158, 16, 0.85);
+    transition: 0.2s;
+}
+
+.selected {
+    background-color: rgba(10, 10, 10, 0.8);
+}
