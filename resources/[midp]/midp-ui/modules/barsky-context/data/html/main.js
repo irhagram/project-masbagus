@@ -48,12 +48,12 @@ $(document).click(function(event){
 })
 
 const PostData = (id) => {
-    $.post(`https://midp-context/dataPost`, JSON.stringify(Button[id]))
+    $.post(`https://midp-ui/dataPost`, JSON.stringify(Button[id]))
     return CloseMenu();
 }
 
 const CancelMenu = () => {
-    $.post(`https://midp-context/cancel`)
+    $.post(`https://midp-ui/cancel`)
     return CloseMenu();
 }
 

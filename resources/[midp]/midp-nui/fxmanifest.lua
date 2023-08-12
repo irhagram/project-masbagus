@@ -6,6 +6,8 @@ ui_page {
 	'hud/index.html'
 }
 
+shared_script '@es_extended/imports.lua'
+
 client_scripts {
 	'@es_extended/client/wrapper.lua',
 	'@es_extended/locale.lua',

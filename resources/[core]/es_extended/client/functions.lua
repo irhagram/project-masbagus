@@ -177,37 +177,37 @@ function ESX.ProgressBar(options, completed)
     end
 end
 
-if GetResourceState("side_context") ~= "missing" then
+if GetResourceState("midp-context") ~= "missing" then
     function ESX.OpenContext(...)
-        exports["side_context"]:Open(...)
+        exports["midp-context"]:Open(...)
     end
 
     function ESX.PreviewContext(...)
-        exports["side_context"]:Preview(...)
+        exports["midp-context"]:Preview(...)
     end
 
     function ESX.CloseContext(...)
-        exports["side_context"]:Close(...)
+        exports["midp-context"]:Close(...)
     end
 
     function ESX.RefreshContext(...)
-        exports["side_context"]:Refresh(...)
+        exports["midp-context"]:Refresh(...)
     end
 else
     function ESX.OpenContext()
-        print("[^1ERROR^7] Tried to ^5open^7 context menu, but ^5side_context^7 is missing!")
+        print("[^1ERROR^7] Tried to ^5open^7 context menu, but ^5midp-context^7 is missing!")
     end
 
     function ESX.PreviewContext()
-        print("[^1ERROR^7] Tried to ^5preview^7 context menu, but ^5side_context^7 is missing!")
+        print("[^1ERROR^7] Tried to ^5preview^7 context menu, but ^5midp-context^7 is missing!")
     end
 
     function ESX.CloseContext()
-        print("[^1ERROR^7] Tried to ^5close^7 context menu, but ^5side_context^7 is missing!")
+        print("[^1ERROR^7] Tried to ^5close^7 context menu, but ^5midp-context^7 is missing!")
     end
 
     function ESX.RefreshContext()
-        print("[^1ERROR^7] Tried to ^5Refresh^7 context menu, but ^5side_context^7 is missing!")
+        print("[^1ERROR^7] Tried to ^5Refresh^7 context menu, but ^5midp-context^7 is missing!")
     end
 end
 

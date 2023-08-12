@@ -90,7 +90,7 @@ AddEventHandler('dl-robjewel:thermite', function()
         Citizen.Wait(2000)
         -- SetEntityCoords(PlayerPedId(), -596.30, -283.90, 50.3237)
 
-        exports['midp-context']:thermiteminigame(10, 3, 3, 10,
+        exports['midp-ui']:thermiteminigame(10, 3, 3, 10,
         function() -- success
             --print("success")
                 FirstLoadup() -- creating the targets

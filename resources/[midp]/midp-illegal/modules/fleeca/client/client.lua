@@ -452,7 +452,7 @@ AddEventHandler('alan-fleecarob:hack', function()
 
             if dst <= 1 and not Check[k] then
                 Wait(750)
-                exports['midp-context']:OpenHackingGame(function(outcome)
+                exports['midp-ui']:OpenHackingGame(function(outcome)
                     if outcome == true then 
                         Wait(750)
                         TriggerServerEvent("alan-fleecarob:startcheck", k)

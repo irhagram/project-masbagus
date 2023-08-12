@@ -7,6 +7,8 @@ version '1.7.2'
 
 ui_page 'html/index.html'
 
+shared_script '@es_extended/imports.lua'
+
 client_scripts {
     'config.lua',
     'client.lua'

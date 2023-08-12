@@ -20,7 +20,7 @@
 
       });
 
-      $.post('http://midp-context/nui_ready', '{}');
+      $.post('http://midp-ui/nui_ready', '{}');
 
     }
 
@@ -110,7 +110,7 @@
     }
 
     onFrameMessage(name, msg) {
-      $.post('http://midp-context/frame_message', JSON.stringify({name, msg}));
+      $.post('http://midp-ui/frame_message', JSON.stringify({name, msg}));
     }
 
   }

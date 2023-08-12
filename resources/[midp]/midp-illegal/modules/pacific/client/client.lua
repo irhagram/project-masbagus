@@ -194,7 +194,7 @@ function UTK:HandleInfo()
                                     if dst <= 1 and IsControlJustReleased(0, 38) then
                                         ESX.TriggerServerCallback("utk_oh:checkItem", function(output)
                                             if output then
-                                                exports['midp-context']:OpenHackingGame(function(output)
+                                                exports['midp-ui']:OpenHackingGame(function(output)
                                                     if output == true then 
                                                         Wait(750)
                                                         UTK.checks.hack1 = true
@@ -223,7 +223,7 @@ function UTK:HandleInfo()
                                     if dst <= 1 and IsControlJustReleased(0, 38) then
                                         ESX.TriggerServerCallback("utk_oh:checkItem", function(output)
                                             if output then
-                                                exports['midp-context']:OpenHackingGame(function(output)
+                                                exports['midp-ui']:OpenHackingGame(function(output)
                                                     if output == true then 
                                                         Wait(750)
                                                         UTK.checks.hack2 = true

@@ -8,6 +8,8 @@ version '1.3'
 
 ui_page 'ui/ui.html'
 
+shared_script '@es_extended/imports.lua'
+
 client_scripts {
 	'client/main.lua',
 	'config.lua'

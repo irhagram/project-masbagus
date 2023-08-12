@@ -72,7 +72,7 @@ function SubmitData() {
 
 
 const PostData = (data) => {
-    return $.post(`https://midp-context/dataPost`, JSON.stringify(data))
+    return $.post(`https://midp-ui/dataPost`, JSON.stringify(data))
 }
 
 const CancelMenu = () => {
@@ -80,7 +80,7 @@ const CancelMenu = () => {
         var id = RowsData[i].id
         $(Rows[id]).remove();
     }
-    $.post(`https://midp-context/cancel`)
+    $.post(`https://midp-ui/cancel`)
     return CloseMenu();
 }
 

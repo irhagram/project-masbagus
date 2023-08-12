@@ -41,7 +41,7 @@ RegisterCommand('-scenecreate', function()
     if placement[1] == 0.0 or placement == nil or not placement then return end
     coords = placement
 
-    local scene = exports["midp-context"]:KeyboardInput({
+    local scene = exports["midp-ui"]:KeyboardInput({
         header = "Add Scene",
         rows = {
             {

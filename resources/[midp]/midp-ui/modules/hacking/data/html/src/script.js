@@ -49,7 +49,7 @@ async function start(){
         await delay(5)
     }
 
-    fetch('https://midp-context/callback', {
+    fetch('https://midp-ui/callback', {
         method: 'POST', 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
