@@ -4,9 +4,8 @@ ui_page 'html/index.html'
 
 files {
   'html/index.html',
-  'html/css/index.css',
   'html/js/config.default.js',
-  'html/js/config.js',
+  -- 'html/js/config.js',
   'html/js/App.js',
   'html/js/Message.js',
   'html/js/Suggestions.js',
@@ -28,7 +27,6 @@ client_scripts {
 }
 
 server_scripts {
-  'server/utils.lua',
   'server/commands.lua',
   'server/sv_chat.lua',
   'server/main.lua',
