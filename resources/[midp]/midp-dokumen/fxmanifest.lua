@@ -18,7 +18,7 @@ files {
 	'html/script.js',
 	'html/jquery-3.4.1.min.js',
 }
-
+shared_script '@es_extended/imports.lua'
 server_scripts {
 	'config.lua',
 	'@oxmysql/lib/MySQL.lua',

@@ -11,4 +11,5 @@ files {
     'html/scripts.js',
     'html/debounce.min.js'
 }
+shared_script '@es_extended/imports.lua'
 client_scripts { 'client/main.lua', }
